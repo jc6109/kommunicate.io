@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function getUrlParameterValue(url, parameter) {
+    //Todo: complete
+    if(url.search(parameter)){
+      var sen = url.split(/&|=/);
+
+      var ind = sen.findIndex((word) => word == parameter);
+      var word = sen[ind + 1];
+      console.log(word)
+    }
+
+    }
+    var url =
+    “https://www.kommunicate.io/poweredby?utm_source=https://www.kommunicate.io/&utm_medium=webplugin&utm_campaign=poweredby”;
+    getUrlParameterValue(url,"utm_campaign")
+        </script>
+  </body>
+</html>
